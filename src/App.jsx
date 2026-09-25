@@ -25,14 +25,16 @@ import Backgroundcolor from "./Backgroundcolor";
 import Parent from "./props/Parent";
 import Parentdata from "./props/Propsdrilling";
 
-// import Userdata from "./Userdata";
-// import { Userprovider } from "./Usercontex";
+import UserData from "./Components/Hooks/Usecontex/UserData";
+import { Userprovider } from "./Components/Hooks/Usecontex/UserContext";
+
 import Forms from "./Components/form/Forms";
 import Crud from "./Components/form/Crud";
+import Deletemethod from "./Components/Hooks/Usestate/Deletemethod";
 
 function App() {
   return (
-    // <Userprovider>
+    <Userprovider>
       <BrowserRouter>
         <Routes>
 
@@ -45,7 +47,7 @@ function App() {
 
           <Route path="/like" element={<Like />} />
 
-          {/* <Route path="/provide" element={<Userdata />} /> */}
+          <Route path="/provide" element={<UserData />} />
 
           <Route path="/props" element={<Parent />} />
 
@@ -78,9 +80,11 @@ function App() {
 
           <Route path="/show" element={<Showhide />} />
 
+          <Route path="/deletem" element={<Deletemethod />} />
+
         </Routes>
       </BrowserRouter>
-    // </Userprovider>
+    </Userprovider>
   );
 }
 
