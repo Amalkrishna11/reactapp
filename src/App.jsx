@@ -31,6 +31,8 @@ import { Userprovider } from "./Components/Hooks/Usecontex/UserContext";
 import Forms from "./Components/form/Forms";
 import Crud from "./Components/form/Crud";
 import Deletemethod from "./Components/Hooks/Usestate/Deletemethod";
+import Uncontrolled from "./Components/Hooks/useref/Uncontrolled";
+import WithoutMemoExample from "./Components/Hooks/usememo/WithOutMemoExample";
 
 function App() {
   return (
@@ -81,7 +83,10 @@ function App() {
           <Route path="/show" element={<Showhide />} />
 
           <Route path="/deletem" element={<Deletemethod />} />
+          <Route path="/useref" element={<Uncontrolled />} />
+          <Route path="/withot" element={<WithoutMemoExample />} />
 
+          
         </Routes>
       </BrowserRouter>
     </Userprovider>
